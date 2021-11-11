@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NLW Heat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="avatar">
+                <span>
+                    <img src="image/build.svg" alt="build_image">
+                </span>
+                
+                <img src="https://avatars.githubusercontent.com/u/49444699?v=4"
+                    alt="profile_image">
+            </div>
+
+            <h1>Lucas Eduardo</h1>
+
+            <a href="https://github.com/LucasEduardo122" target="_blank">
+                <img src="image/github 2.svg" alt="github_image">
+                lucaseduardo122
+            </a>
+
+            <p>Um programador focado em construção de páginas e softwares para a web.</p>
+
+            <ul id="socialLinks">
+                <li class="youtube">
+                    <a href="" target="_blank">
+                        <img src="image/YouTube.svg" alt="youtube_image">
+                    </a>
+                </li>
+
+                <li class="facebook">
+                    <a href="" target="_blank">
+                        <img src="image/Facebook.svg" alt="facebook_image">
+                    </a>
+                </li>
+
+                <li class="instagram">
+                    <a href="" target="_blank">
+                        <img src="image/Instagram.svg" alt="instagram_image">
+                    </a>
+                </li>
+
+                <li class="twitter">
+                    <a href="" target="_blank">
+                        <img src="image/Twitter.svg" alt="twitter_image">
+                    </a>
+                </li>
+            </ul>
+
+            <p>As redes sociais acima, são dos instrutores da Rockestseat❤️.</p>
+        </div>
+    </main>
+
+    <script>
+        const LinksSocialMedia = {
+            github: 'jakeliny',
+            youtube: 'jakelinygracielly',
+            instagram: 'mykbrito',
+            facebook: 'jakeline.gracielly',
+            twitter: 'jakelinytec'
+        }
+
+        function changeSocialMediaLinks() {
+            for(let li of socialLinks.children) {
+                const social = li.getAttribute('class');
+
+                li.children[0].href = `https://${social}.com/${LinksSocialMedia[social]}`
+            }
+        }
+
+        changeSocialMediaLinks();
+    </script>
+</body>
+
+</html>
